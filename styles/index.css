@@ -1,0 +1,105 @@
+:root {
+    --black: #16302b;
+    --white: #ffffff;
+    --lightBlue: #99bcde;
+    --darkBlue: #0057ac;
+    --orange: #fe9000;
+    --darkBlueFilter: invert(16%) sepia(98%) saturate(2702%) hue-rotate(198deg) brightness(103%) contrast(101%);
+    --orangeFilter: invert(68%) sepia(45%) saturate(5454%) hue-rotate(1deg) brightness(104%) contrast(104%);
+}
+/*  Globals **/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para Box Model **/
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Krub', sans-serif;
+    background-color: var(--white);
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    margin: 8rem auto 5rem auto;
+    text-align: center;
+    justify-content: center;
+}
+.header__line {
+    border-left: 0.15rem solid var(--lightBlue);
+    height: 10rem;
+    margin: 0 2rem;
+}
+.header__logoTec > img {
+    height: 10rem;
+}
+.header__yearTec > img {
+    height: 10rem;
+    
+}
+.content {
+    padding: 3rem;
+    text-align: center;
+    justify-content: center;
+
+}
+.content__hackLogo > img {
+    height: 16rem;
+}
+.content__details {
+    display: flex;
+    flex-direction: row;
+}
+.content__details__line {
+    border-left: 0.15rem solid var(--orange);
+    height: 15rem;
+    margin: 0 2rem;
+}
+.content__details__datePlace {
+    justify-content: left;
+    text-align: left;
+}
+.content__details__datePlace > h1{
+    color: var(--orange);
+}
+.content__details__datePlace > p{
+    color: var(--black);
+    font-size: 2.2rem;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    justify-content: center;
+}
+.footer__hashtag {
+    font-size: 5rem;
+}
+.footer__icons {
+    display: flex;
+    flex-direction: row;
+}
+.footer_icons__facebook > img {
+    filter: var(--darkBlueFilter);
+    width: 5rem;
+}
+.footer_icons__linkedin > img {
+    filter: var(--darkBlueFilter);
+    width: 5rem;
+}
+.footer_icons__globe > img {
+    filter: var(--darkBlueFilter);
+    width: 5rem;
+}
+
+@media (min-width: 740px) {
+
+
+}
+@media (min-width: 920px) {
+
+
+}
