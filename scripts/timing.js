@@ -1,5 +1,3 @@
-
-
 //===
 // VARIABLES
 //===
@@ -45,4 +43,3 @@ function updateCountdown() {
 updateCountdown();
 // Refresh every second
 setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
-

@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+.footer__icons {
+  display: flex;
+  flex-direction: row;
+}
+.footer_icons__facebook, .footer_icons__linkedin, .footer_icons__globe, .footer_icons__location {
+  height: 3rem;
+}/*# sourceMappingURL=footer.css.map */

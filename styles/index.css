@@ -7,6 +7,7 @@
     --darkBlueFilter: invert(16%) sepia(98%) saturate(2702%) hue-rotate(198deg) brightness(103%) contrast(101%);
     --orangeFilter: invert(68%) sepia(45%) saturate(5454%) hue-rotate(1deg) brightness(104%) contrast(104%);
 }
+
 /*  Globals **/
 html {
     font-size: 62.5%;

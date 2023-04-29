@@ -1,0 +1,41 @@
+@use '../globals/variables'
+.content
+    // Dimensions
+    padding: 1rem
+    height: 100%
+
+    // Display
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    flex: 1
+
+    gap: 3rem
+
+
+    &__hackLogo
+        // Dimensions
+        width: 80%
+
+        // Display
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__hackLogo > img
+        width: inherit
+
+    &__details__datePlace
+        padding-left: 1rem
+        h1, b
+            font-size: 1rem
+        h1
+            color: variables.$orange
+        b
+            color: variables.$black
+
+    &__details__datePlace
+        border-left: 0.15rem solid variables.$orange
+        height: 100%
+        margin: 0 2rem
