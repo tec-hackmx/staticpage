@@ -93,6 +93,15 @@ body {
   height: 100%;
   margin: 0 2rem;
 }
+.content__hashtag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+.content__hashtag > img {
+  width: inherit;
+}
 
 .footer {
   display: flex;
@@ -129,4 +138,6 @@ body {
 }
 .footer_icons__facebook > a p, .footer_icons__linkedin > a p, .footer_icons__instagram > a p, .footer_icons__location > a p {
   font-size: 0.5rem;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
