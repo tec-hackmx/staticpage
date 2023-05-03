@@ -1,0 +1,26 @@
+@use '../globals/variables'
+
+.person-card
+    // Display
+    display: flex
+    flex-direction: column
+    gap: 0.5rem
+
+    // Dimensions
+    padding: 1rem
+
+.person-card > img
+    // Dimensions
+    width: 100%
+
+    // Views
+    border-radius: 50%
+
+.person-card > h2
+    color: variables.$dark-blue
+
+.person-card > h2, .person-card > h3
+    font-size: 60%
+    @media ( min-width: variables.$width-large )
+        font-size: 80%
+    text-align: center

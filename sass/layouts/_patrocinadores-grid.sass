@@ -1,0 +1,19 @@
+@use '../globals/variables'
+    
+.patrocinadores-grid
+    // Display
+    display: grid
+    align-content: center
+    justify-items: center
+    align-items: center
+    grid-template-columns: 1fr 1fr
+    row-gap: 1rem
+
+    // Dimenisons
+    margin: 2rem 0
+
+    @media ( min-width: variables.$width-large )
+        grid-template-columns: 1fr 1fr 1fr 1fr
+
+.patrocinadores-grid > img 
+    width: 80%

@@ -1,0 +1,46 @@
+@use '../globals/variables'
+@mixin section($main-color)
+    // Dimenisons
+    width: 100%
+    padding: 1rem
+
+    // Views
+    @media ( min-width: variables.$width-medium )
+        padding: 1rem 5rem
+
+    h1, h2, h3
+        text-align: center
+    
+    @if $main-color == white
+        h1, h2, h3
+            color: variables.$orange
+        p, a
+            color: variables.$dark-blue
+    @if $main-color == dblue
+        background-color: variables.$dark-blue
+
+        h1, h2, h3
+            color: variables.$orange
+        p, a
+            color: variables.$white
+
+    @if $main-color == orange
+        background-color: variables.$orange
+
+        h1, h2, h3
+            color: variables.$dark-blue
+        p, a
+            color: variables.$white
+
+    &__title
+        margin-bottom: 1rem
+
+.section-white
+    @include section($main-color: blue)
+
+.section-dblue
+    @include section($main-color: dblue)
+
+.section-orange
+    @include section($main-color: orange)
+     

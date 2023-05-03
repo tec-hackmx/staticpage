@@ -1,0 +1,23 @@
+@use '../globals/variables'
+    
+.agradecimientos-grid
+    // Display
+    display: grid
+    align-content: center
+    justify-items: center
+    align-items: center
+    grid-template-columns: 1fr
+    row-gap: 1rem
+
+    // Dimenisons
+    margin: 2rem 0
+
+    @media ( min-width: variables.$width-large )
+        row-gap: 0
+        column-gap: 2rem
+        grid-template-columns: repeat(3, 1fr)
+        
+.agradecimientos-grid > img 
+    height: 3rem
+    @media ( min-width: variables.$width-xlarge )
+        height: 4rem

@@ -1,0 +1,19 @@
+@use '../globals/variables'
+    
+#inicio-section
+    // Display
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 1rem
+
+    h1
+        text-align: center
+    img
+        width: 70%
+        @media ( min-width: variables.$width-large )
+            width: 50%
+    button
+        @media ( min-width: variables.$width-medium )
+            width: 10rem            

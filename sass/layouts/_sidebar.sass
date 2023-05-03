@@ -1,0 +1,93 @@
+@use '../globals/variables'
+    
+.sidebar
+    // Dimensions
+    height: auto
+    width: 0
+    z-index: 1000
+    
+
+    // Hidden
+    transition: all 0.5s
+    transform: translateX(-100%)
+    visibility: hidden
+    opacity: 0
+
+    // Views
+    background-color: variables.$dark-blue
+
+
+    &__brand-wrapper
+        // Dimensions
+        height: auto
+        padding: 0.5rem
+
+        // Views
+        background-color: variables.$orange
+
+        border-radius: 10px
+        img
+            height: 2rem
+                
+        i
+            color: variables.$dark-blue
+            font-size: 1.5rem
+        @media ( min-width:  variables.$width-medium )
+            img
+                height: 3rem
+            i
+                font-size: 3rem
+
+        
+        // Display
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__navigation-elements
+        // Dimensions
+        padding: 0.5rem
+        margin-top: 1rem
+
+        // Views
+        background-color: variables.$orange
+        border-radius: 10px
+
+        li
+            border-bottom: 1px solid variables.$dark-blue
+            margin-bottom: 0.5rem
+
+        a
+            color: variables.$dark-blue
+            font-size: 1rem
+            @media ( min-width:  variables.$width-medium )
+                font-size: 2rem
+                
+
+    &__tec-brand
+        // Dimensions
+        padding: 0.5rem
+        margin-top: 1rem
+    
+        // Views
+        background-color: variables.$orange
+        border-radius: 10px
+
+        // Display
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        img
+            height: 1rem
+
+.show-sidebar
+    // Dimensions
+    transition: all 0.5s
+    width: 85vw
+
+    // Hidden
+    transform: translateX(0)
+    visibility: visible
+    opacity: 1
+    padding: 1rem 0.5rem

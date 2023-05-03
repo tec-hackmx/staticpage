@@ -1,0 +1,58 @@
+@use '../globals/variables'
+.topbar
+    // Centering inside elements
+    display: flex
+    flex-direction: row
+    text-align: center
+    justify-content: space-between
+    align-items: center
+
+    // Views
+    box-shadow: rgba(17, 12, 46, 0.1) 0px 0px 50px 0px
+
+    // Dimensions
+    width: 100%
+    padding: 1rem
+
+    &__brand-wrapper
+        // Dimensions
+        height: 2rem
+        @media ( min-width: variables.$width-medium )
+            height: 3rem
+
+        &__image, a
+            height: inherit
+    
+    &__sidebar-button > i
+        // Views
+        color: variables.$dark-blue
+        font-size: 1.5rem
+        cursor: pointer
+        @media ( min-width: variables.$width-medium )
+            font-size: 2.5rem
+
+    &__navigation-elements
+        // Views
+        display: none
+        ul
+            display: inline-flex
+            flex-direction: row
+            gap: 0.5rem
+
+        &__anchor:hover
+            color: variables.$orange
+            text-decoration: underline
+
+        &__anchor
+            // Views
+            color: variables.$dark-blue
+            font-size: 0.9rem
+            transition: all 0.5s
+        
+    // Display Controls
+    @media ( min-width: variables.$width-xlarge )
+        &__sidebar-button
+            display: none
+        &__navigation-elements
+            display: block
+

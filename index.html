@@ -1,65 +1,286 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/index.css">
-    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
-    <title>HackMX-2023</title>
-</head>
-<body>
-    <header class="header">
-        <div class="header__logoTec">
-            <img src="img/tecLogo.png" alt="tecLogo">
-        </div>
-        <div class="header__line"></div>
-        <div class="header__yearTec">
-            <img src="img/yearsTec.png" alt="yearsTec">
-        </div>
-    </header>
-
-    <main class="content">
-        <div class="content__hackLogo">
-            <img src="img/hackMX.png" alt="hackMx-logo">
-        </div>
-        <div class="content__details">
-            <div class="content__details__line"></div>
-            <div class="content__details__datePlace">
-                <h1>MAYO 27 y 28</h1>
-                <p><b>TEC CEM</b> - Salón de Congresos</p><br/>
-                <p><b>Cuenta regresiva para la apertura del registro:</b></p><span id="days"></span> días / <span id="hours"></span> horas / <span id="minutes"></span> minutos / <span id="seconds"></span> segundos
-            </div>
-        </div>
-        <div class="content__hashtag">
-            <img src="img/yoIngenio.png" alt="hashtag-yoIngenio">
-        </div>
-    </main>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <footer class="footer">
-        <div class="footer__icons">
-            <div class="footer_icons__facebook" >
-                <a href="https://www.facebook.com/TecHackMx/">
-                    <img src="svg/facebook.svg" alt="facebook-logo-hack">
-                </a>
+        <!-- TAB -->
+        <title>HackMx - 5</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="dist/index.css">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    </head>
+    <body>
+
+        <div class="sidebar">
+            <div class="sidebar__brand-wrapper">
+                <img src="img/logoMini.png" alt="HackMx Logo">
+                <i class="las la-times sidebar-toggle"></i>
             </div>
-            <div class="footer_icons__linkedin">
-                <a href="https://www.linkedin.com/company/hackmx/about/">
-                    <img src="svg/linkedin.svg" alt="linkedin-logo-hack">
-                </a>
+            <div class="sidebar__navigation-elements">
+                <ul>
+                    <li><a href="#" class="sidebar__navigation-elements__anchor">Inicio</a></li>
+                    <li><a href="#" class="sidebar__navigation-elements__anchor">Acerca de</a></li>
+                    <li><a href="#" class="sidebar__navigation-elements__anchor">Patrocinadores</a></li>
+                    <li><a href="#" class="sidebar__navigation-elements__anchor">Agradecimientos</a></li>
+                    <li><a href="#" class="sidebar__navigation-elements__anchor">Equipo</a></li>
+                    <li><a href="#" class="sidebar__navigation-elements__anchor">FAQ</a></li>
+                    <li><a href="#" class="sidebar__navigation-elements__anchor">Agenda</a></li>
+                    <li><a href="#" class="sidebar__navigation-elements__anchor">Retos</a></li>
+                    <li><a href="#" class="sidebar__navigation-elements__anchor">Bases</a></li>
+                    <li><a href="#" class="sidebar__navigation-elements__anchor">Contacto</a></li>
+                </ul>
             </div>
-            <div class="footer_icons__instagram">
-                <a  href="https://www.instagram.com/techackmx/">
-                    <img src="svg/instagram.svg" alt="globe-logo-hack">
-                </a>
-            </div>
-            <div class="footer_icons__location">
-                <a href="https://www.hackmx.mx">
-                    <img src="svg/globe-solid.svg" alt="location-logo-hack">
-                </a>
+            <div class="sidebar__tec-brand">
+                <img src="img/tecLogo.png" alt="Logo Tec">
+                <img src="img/yearsTec.png" alt="Logo Tec">
             </div>
         </div>
-    </footer>
-    <script type="text/javascript" src="scripts/timing.js"></script>
-</body>
+
+        <div class="main-content">
+            <div class="topbar">
+                <!-- Brand Wrapper -->
+                <div class="topbar__brand-wrapper">
+                    <a href="#" class="topbar__navigation-elements__anchor">
+                        <img class="topbar__brand-wrapper__image" src="{% static 'img/logoExpanded.png' %}" alt="">
+                    </a>
+                </div>
+            
+                <!-- Display Sidebar Button -->
+                <div class="topbar__sidebar-button sidebar-toggle">
+                    <i class="las la-bars"></i>
+                </div>
+            
+                <!-- Navigation Elements -->
+                <div class="topbar__navigation-elements">
+                    <ul>
+                        <li><a href="#" class="topbar__navigation-elements__anchor">Inicio</a></li>
+                        <li><a href="#acerca-section" class="topbar__navigation-elements__anchor">Acerca de</a></li>
+                        <li><a href="#patrocinadores-section" class="topbar__navigation-elements__anchor">Patrocinadores</a></li>
+                        <li><a href="#agradecimientos-section" class="topbar__navigation-elements__anchor">Agradecimientos</a></li>
+                        <li><a href="#equipo-section" class="topbar__navigation-elements__anchor">Equipo</a></li>
+                        <li><a href="#faq-section" class="topbar__navigation-elements__anchor">FAQ</a></li>
+                        <!-- <li><a onclick="location.href = '/agenda'" class="topbar__navigation-elements__anchor">Agenda</a></li> -->
+                        <li><a href="#agenda-section" class="topbar__navigation-elements__anchor">Agenda</a></li>
+                        <li><a href="#retos-section" class="topbar__navigation-elements__anchor">Retos</a></li>
+                        <li><a href="#bases-section" class="topbar__navigation-elements__anchor">Bases</a></li>
+                        <li><a href="#contacto-section" class="topbar__navigation-elements__anchor">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        <main clas="main-content__container">
+
+        <!-- Sección de Inicio - Registro -->
+            <div class="section-white" id="inicio-section">
+                <img src="img/HackMX.png" alt="HackMx Logo">
+                <h1>
+                    27 y 28 Mayo del 2023
+                </h1>
+                <button onclick='location.href = "https://www.eventbrite.com/e/hackmx5-tickets-629692957587"' class="button-dblue">Regístrate</button>
+            </div>
+
+            <!-- Sección de Acerca -->
+            <div class="section-orange" id="acerca-section">
+                <h1 class="section-orange__title">
+                    ¿Qué es el HackMx23?
+                </h1>
+                <p>
+                    Un Hackatón es un maratón de desarrollo e innovación de 32 horas, donde equipos multidisciplinarios resuelven retos que requieran de sus habilidades. A su vez, se busca que dentro de el tiempo establecido se desarrolle un servicio o producto único utilizando la tecnología. Los mejores proyectos son premiados y apoyados para volverlos una realidad.
+                </p>
+                <br>
+                <p>
+                    HackMx es el Hackatón estudiantil organizado por el Tecnológico de Monterrey Región Ciudad de México y tiene como sede uno los tres planteles de la institución. Este evento es organizado por alumnos y académicos de todos los campus de la región.
+                </p>
+            </div>
+
+            <!-- Sección de Patrocinadores -->
+            <div class="section-white" id="patrocinadores-section">
+                <h1 class="section-white__title">
+                    Patrocinadores
+                </h1>
+                <div class="patrocinadores-grid">
+                    <img src="img/patrocinador1.png" alt="patrocinador1">
+                    <img src="img/patrocinador2.png" alt="patrocinador2">
+                    <img src="img/patrocinador3.png" alt="patrocinador3">
+                    <img src="img/patrocinador4.png" alt="patrocinador4">
+                </div>
+            </div>
+
+            <!-- Sección de Agradecimientos -->
+            <div class="section-dblue" id="agradecimientos-section">
+                <h1 class="section-dblue__title">
+                    Agradecimientos
+                </h1>
+                <div class="agradecimientos-grid">
+                    <img src="img/agradecimiento1.png" alt="agradecimiento1">
+                    <img src="img/agradecimiento2.png" alt="agradecimiento2">
+                    <img src="img/agradecimiento3.png" alt="agradecimiento3">
+                </div>
+            </div>
+
+            <!-- Sección de Equipo -->
+            <div class="section-white" id="equipo-section">
+                <h1 class="section-white__title">
+                    Equipo organizador
+                </h1>
+                <div class="persons-grid">
+                    <div class="person-card">
+                        <img class="person-card__image" src="img/tecLogo.png" alt="persona1">
+                        <h2 class="person-card__name">
+                            MARK 
+                        </h2>
+                        <h3 class="person-card__position">
+                            CEO
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de FAQ -->
+            <div class="section-orange" id="faq-section">
+                <h1 class="section-orange__title">
+                    FAQ
+                </h1>
+                <p>
+                    <div class="">
+                        <ul class="">
+                            <li>
+                                    <h4 class="section-orange__title">
+                                        P: ¿Se necesita saber programar?
+                                    </h4>
+                                    <p class="">No, para eso tenemos diferentes perfiles y es recomendable que cada equipo cuente con mínimo una persona de cada perfil: <strong class="accent1-color">Diseño</strong>, <strong class="accent2-color">Desarrollo</strong>, <strong class="accent3-color">Negocios</strong>.
+                                    </p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿De cuántas personas es el equipo?
+                                    </h4>
+                                    <p class="">Máximo de <strong class="">4</strong> personas.
+                                    </p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿Cuánto tiempo dura?¿Me puedo quedar a dormir?
+                                    </h4>
+                                    <p class="">Dura alrededor de 32 horas. <strong class="">Sí</strong>, sí te puedes quedar a dormir en el lugar.</p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿Me puedo quedar a dormir?
+                                    </h4>
+                                    <p class=""> <strong class="">Sí</strong>, sí te puedes quedar a dormir en el lugar.</p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿Dónde va a ser?
+                                    </h4>
+                                    <p class="">En el Tecnológico de Monterrey Estado de México: Av Lago de Guadalupe KM 3.5, Margarita Maza de Juárez, 52926 Cd López Mateos, Méx. <br/><strong class="accent2-color no-link"><a href="#map">[mapa]</a></strong></p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿Cúando es?
+                                    </h4>
+                                    <p class="">27 y 28 de Mayo del 2023.
+                                    </p>
+
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿Quiénes pueden participar?</h4>
+                                    <p class="">Estudiantes de cualquier universidad, edad, sólo que esten inscritos.</p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿La participación en el HackMx tiene costo?</h4>
+                                    <p class="">No, es totalmente gratuito. De igual manera los servicios alimenticios y recreativos durante la estancia en el Campus serán gratuitos. Si vienes de otra universidad es necesario que consideres tus gastos  de transporte al campus. Puedes quedarte a dormir, por eso no te preocupes. En  el caso de que seas alumno de los campus de la Región Ciudad de México  el transporte será dado por el Campus de origen. </p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿Qué pasa si no tengo equipo?</h4>
+                                    <p class="">No te preocupes. El día de la inscripción podrás formar equipos con aquellos participantes que tampoco tengan equipo. </p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿Quiénes pueden participar?</h4>
+                                    <p class="">Cualquier estudiante, ya sea de preparatoria, profesional o postgrado de cualquier universidad.  </p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿Cómo puedo registrar a mi equipo?</h4>
+                                    <p class="">Posteriormente enviaremos las instrucciones para registrar a los equipos, por ahora es necesario que se registren individualmente.  </p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿Cuáles son los premios?</h4>
+                                    <p class=""><strong class="">¡¡SORPRESA!!</strong> Cada patrocinador nos dará premios diferentes. </p>
+                            </li>
+                            <li>
+                                    <h4 class="">P: ¿Cuáles son los temas de Hackathon?</h4>
+                                    <p class="">Cada empresa expondrá un reto diferente. Recuerda, <strong class="">un equipo multidisciplinario podrá ser la mejor opción para ganar.</strong></p>
+                            </li>
+                        </ul>
+                </div>
+                </p>
+            </div>
+
+            <!-- Sección de agenda -->
+            <div class="section-dblue" id="agenda-section">
+                <h1 class="section-dblue__title">
+                    Agenda
+                </h1>
+                <div style="text-align:center;
+                            font-size: 100px;">&#8987;</div>
+            </div>
+
+            <!-- Sección de retos -->
+            <div class="section-white" id="retos-section">
+                <h1 class="section-white__title">
+                    Retos
+                </h1>
+                <div style="text-align:center;
+                            font-size: 100px;">&#8987;</div>
+            </div>
+
+            <!-- Sección de bases -->
+            <div class="section-dblue" id="bases-section">
+                <h1 class="section-dblue__title">
+                    Bases
+                </h1>
+                <div style="text-align:center;
+                            font-size: 100px;">&#8987;</div>
+            </div>
+
+            <!-- Sección de contacto -->
+            <div class="section-white" id="contacto-section">
+                <h1 class="section-white__title">
+                    Contacto
+                </h1>
+                <div style="text-align:center;
+                            font-size: 100px;">&#8987;</div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__hashtag">
+                <img src="img/yoingenio.png" alt="YoIngenio Logo" class="footer__hashtag__image">
+            </div>
+            <div class="footer__icons">
+                <div class="footer_icons__facebook">
+                    <a href="https://www.facebook.com/TecHackMx/">
+                        <i class="lab la-facebook-square"></i>
+                    </a>
+                </div>
+                <div class="footer_icons__linkedin">
+                    <a href="https://mx.linkedin.com/school/tecdemonterrey/">
+                        <i class="lab la-linkedin"></i>
+                    </a>
+                </div>
+                <div class="footer_icons__instagram">
+                    <a  href="https://www.instagram.com/techackmx/">
+                        <i class="lab la-instagram"></i>
+                    </a>
+                </div>
+                <div class="footer_icons__location">
+                    <a href="https://goo.gl/maps/h8ur7XNAZD547nai6">
+                        <i class="las la-map-marker-alt"></i>
+                    </a>
+                </div>
+            </div>
+        
+            </footer>
+        </div>
+    </body>
 </html>
